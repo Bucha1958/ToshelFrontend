@@ -1,0 +1,27 @@
+.zoom-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .zoom-image {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .zoom-container:hover .zoom-image {
+    transform: scale(2); /* Adjust the scale as needed */
+    cursor: zoom-in;
+  }
+  
+  .zoom-container:hover {
+    cursor: zoom-in;
+  }
+  
+  .tooltip {
+    position: absolute;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  
