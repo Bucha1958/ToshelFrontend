@@ -51,7 +51,7 @@ const HomePage = () => {
   }, [nextImageIndex, images.length]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/projects`)
+    fetch("www.toshel.org/api/projects")
       .then((res) => res.json())
       .then((data) => {
         const formattedProjects = data.projects.map((proj) => ({
