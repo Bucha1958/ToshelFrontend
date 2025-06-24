@@ -11,7 +11,7 @@ const Footer = ({ toggleSidebar }) => {
                 <div className="flex flex-wrap justify-between">
                     {/* Column 1: Customer Service */}
                     <div className="w-full md:w-1/4 mb-8 md:mb-0">
-                        <h4 className="text-xl font-semibold mb-4">Customer Service</h4>
+                        {/* <h4 className="text-xl font-semibold mb-4">Customer Service</h4>
                         <ul className="space-y-4">
                             <li>
                                 <a 
@@ -28,16 +28,28 @@ const Footer = ({ toggleSidebar }) => {
                             <li><a href="#" className="hover:underline">Shipping Information</a></li>
                             <li><a href="#" className="hover:underline">Returns & Exchanges</a></li>
                             <li><Link to="/frequently_asked_questions" className="hover:underline">FAQs</Link></li>
+                        </ul> */}
+                        <h4 className="text-xl font-semibold mb-4">Our Services</h4>
+                        <ul className="space-y-4">
+                            <li>
+                                <a href="#" className="hover:underline" onClick={(e) => { e.preventDefault(); toggleSidebar(); }}>
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li><a href="#" className="hover:underline">Project Management</a></li>
+                            <li><a href="#" className="hover:underline">Civil Engineering</a></li>
+                            <li><Link to="/frequently_asked_questions" className="hover:underline">FAQs</Link></li>
                         </ul>
+
                     </div>
                     {/* Column 2: Company Information */}
                     <div className="w-full md:w-1/4 mb-8 md:mb-0">
                         <h4 className="text-xl font-semibold mb-4">Company</h4>
                         <ul className="space-y-4">
-                            <li><a href="#" className="hover:underline">About Us</a></li>
-                            <li><a href="#" className="hover:underline">Careers</a></li>
-                            <li><a href="#" className="hover:underline">Privacy Policy</a></li>
-                            <li><a href="#" className="hover:underline">Terms of Service</a></li>
+                            <li><Link to="/about" className="hover:underline">About Toshel</Link></li>
+                            <li><a href="#" className="hover:underline">Meet the Team</a></li>
+                            <li><a href="#" className="hover:underline">Safety Policy</a></li>
+                            <li><a href="#" className="hover:underline">Quality Assurance</a></li>
                         </ul>
                     </div>
                     {/* Column 3: Social Media */}
@@ -61,7 +73,7 @@ const Footer = ({ toggleSidebar }) => {
                     </div>
                 </div>
                 <div className="mt-8 border-t border-gray-700 pt-4 text-center text-gray-500">
-                    &copy; 2024 OKXEEL. All rights reserved.
+                    &copy; 2025 TOSHEL CONSTRUCTION. All rights reserved.
                 </div>
             </div>
         </footer>

@@ -21,10 +21,11 @@ import Services from '../components/Services';
 import VisionSidebar from '../components/Vision';
 import Team from '../components/Teams';
 import ProjectGallery from '../components/ProjectGallery';
+import AboutUs from './AboutUs';
 
 
 const HomePage = () => {
-  const images = [toshelPlant, okxeel1, okxeel2, chocolate, ikpere, image2, image3];
+  const images = [toshelPlant, okxeel1, okxeel2, ikpere, image2, image3];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [nextImageIndex, setNextImageIndex] = useState(1);
@@ -84,6 +85,7 @@ const HomePage = () => {
         <Head />
         <Hero />
       </div>
+      <AboutUs />
       <Services />
       {loading ? (
         <div className="text-center py-10">Loading projects...</div>

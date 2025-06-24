@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import aboutImg from '../assets/image2.jpg'; // Make sure this image exists or replace with correct path
+import aboutImg from '../assets/asphalt2.jpg'; // Make sure this image exists or replace with correct path
 import Head from '../components/Head';
 import Footer from '../components/Footer';
 import SidebarContact from '../components/SidebarContact';
@@ -14,25 +14,26 @@ const AboutUs = () => {
      };
   return (
     <>
-      <Head />
+      {/* <Head /> */}
       <section className="min-h-screen w-full bg-white px-6 py-16 font-poppins mt-20">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-9xl mx-auto">
           {/* Heading */}
-          <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">ABOUT US</h2>
+          {/* <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">ABOUT US</h2> */}
 
           {/* Layout */}
-          <div className="flex flex-col lg:flex-row items-center gap-10">
+          <div className="flex flex-col lg:flex-row items-stretch gap-10">
             {/* Image */}
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 h-full min-h-[600px]">
               <img
                 src={aboutImg}
                 alt="About Toshel Construction"
-                className="w-full h-auto rounded-lg shadow-lg object-cover"
+                className="w-full h-[550px] rounded-lg shadow-lg object-contain"
               />
             </div>
 
             {/* Write-up */}
-            <div className="w-full lg:w-1/2 text-gray-700 space-y-6 text-justify leading-relaxed">
+            <div className="w-full lg:w-1/2 h-full text-gray-700 space-y-6 text-justify leading-relaxed">
+              <h2 className="text-2xl font-bold text-gray-800">ABOUT US</h2>
               <p>
                 <strong>Toshel Construction and Equipment Limited</strong> is currently one of the leading Construction and Equipment Contractors in Nigeria.
               </p>
@@ -52,7 +53,8 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      <Footer toggleSidebar={toggleSidebar}/>
+
+      {/* <Footer toggleSidebar={toggleSidebar}/> */}
       <SidebarContact isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       {sidebarOpen && (
         <div
