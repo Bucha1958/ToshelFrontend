@@ -11,7 +11,7 @@ export default function ProjectsPage() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await fetch(`${import.meta.env.VITE_BASE_URI}/api/projects`);
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/projects`);
         const data = await res.json();
 
         if (!Array.isArray(data.projects)) {
