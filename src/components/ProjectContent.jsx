@@ -86,7 +86,7 @@ function HoverProjectCard({ project, height, className = "" }) {
             <p className="text-sm">{project.description}</p>
           </div>
 
-          <Link to={`/project-details/${project._id}`}>
+          <Link to={`/projects/${project._id}`}>
             <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-500 hover:bg-blue-600 transition-colors">
               <ArrowRight size={20} />
             </div>

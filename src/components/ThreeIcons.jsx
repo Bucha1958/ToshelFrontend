@@ -110,7 +110,7 @@ const ThreeIcons = ({ scrolled }) => {
     <>
       <div className='fixed top-0 right-12 flex justify-end space-x-7 md:space-x-10 mt-9 ml-15 text-black'>
         <div className='relative'>
-          <FontAwesomeIcon icon={faUser} className='cursor-pointer text-xxs md:text-base mb-2' ref={userIconRef} onClick={toggleDropDown} />
+          {/* <FontAwesomeIcon icon={faUser} className='cursor-pointer text-xxs md:text-base mb-2' ref={userIconRef} onClick={toggleDropDown} /> */}
           {iconDropMenu && (
             <div className="absolute right-[-120px] mt-4  flex flex-col space-y-6 font-sm font-semibold bg-white text-black shadow-lg transition-transform duration-300 transform translate-y-0 opacity-100 w-[300px] lg:w-48"
               ref={dropdownRef}
@@ -143,10 +143,10 @@ const ThreeIcons = ({ scrolled }) => {
                       CREATE PRODUCT
                     </button>
                   </div>
-                  <li className="px-4 py-2 hover:bg-gray-200">
+                  {/* <li className="px-4 py-2 hover:bg-gray-200">
                     <FontAwesomeIcon icon={faSignOutAlt} className="mr-2" />
                     <a href="#" onClick={Logout}>LOG OUT</a>
-                  </li>
+                  </li> */}
                 </ul>
               ) : (
                 <ul className="py-6 text-black text-xxs montserrat font-bold">
@@ -154,10 +154,10 @@ const ThreeIcons = ({ scrolled }) => {
                     <FontAwesomeIcon icon={faUserPlus} className="mr-2" />
                     <Link to='/register'>REGISTER</Link>
                   </li> */}
-                  <li className="px-4 py-2 hover:bg-gray-200">
+                  {/* <li className="px-4 py-2 hover:bg-gray-200">
                     <FontAwesomeIcon icon={faSignInAlt} className="mr-2" />
                     <Link to='/admin/login'>ADMIN LOGIN</Link>
-                  </li>
+                  </li> */}
                 </ul>
               )}
             </div>

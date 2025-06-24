@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ProjectContent from "../components/ProjectContent";
 import ProjectFilter from "../components/ProjectFilter";
+import Head from "../components/Head";
 
 const filterOptions = ["All", "Industry", "Infrastructure", "Building"];
 
@@ -45,14 +46,17 @@ export default function ProjectsPage() {
         );
 
   return (
-    <div className="px-4 py-8 max-w-7xl mx-auto">
-      <h1 className="text-3xl font-bold text-center mb-6">All Projects</h1>
-      <ProjectFilter
-        filters={filterOptions}
-        activeFilter={activeFilter}
-        onFilterChange={setActiveFilter}
-      />
-      <ProjectContent projects={filteredProjects} showAll />
-    </div>
+    <>
+      <Head />
+      <div className="px-4 py-8 max-w-7xl mx-auto mt-20">
+        <h1 className="text-3xl font-bold text-center mb-6">All Projects</h1>
+        <ProjectFilter
+          filters={filterOptions}
+          activeFilter={activeFilter}
+          onFilterChange={setActiveFilter}
+        />
+        <ProjectContent projects={filteredProjects} showAll />
+      </div>
+    </>
   );
 }
