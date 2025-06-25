@@ -21,7 +21,6 @@ import Services from '../components/Services';
 import VisionSidebar from '../components/Vision';
 import Team from '../components/Teams';
 import ProjectGallery from '../components/ProjectGallery';
-import AboutUs from './AboutUs';
 
 
 const HomePage = () => {
@@ -52,7 +51,7 @@ const HomePage = () => {
   }, [nextImageIndex, images.length]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/projects`)
+    fetch(`https://www.toshel.org/api/projects`)
       .then((res) => res.json())
       .then((data) => {
         const formattedProjects = data.projects.map((proj) => ({
@@ -85,7 +84,6 @@ const HomePage = () => {
         <Head />
         <Hero />
       </div>
-      <AboutUs />
       <Services />
       {loading ? (
         <div className="text-center py-10">Loading projects...</div>

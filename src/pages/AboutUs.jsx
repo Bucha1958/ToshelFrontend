@@ -14,7 +14,7 @@ const AboutUs = () => {
      };
   return (
     <>
-      {/* <Head /> */}
+      <Head />
       <section className="min-h-screen w-full bg-white px-6 py-16 font-poppins mt-20">
         <div className="max-w-9xl mx-auto">
           {/* Heading */}
@@ -62,6 +62,7 @@ const AboutUs = () => {
           onClick={toggleSidebar}
         />
       )}
+      <Footer />
     </>
   );
 };
