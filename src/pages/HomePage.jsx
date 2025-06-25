@@ -51,7 +51,7 @@ const HomePage = () => {
   }, [nextImageIndex, images.length]);
 
   useEffect(() => {
-    fetch(`https://www.toshel.org/api/projects`)
+    fetch("https://www.toshel.org/api/projects")
       .then((res) => res.json())
       .then((data) => {
         const formattedProjects = data.projects.map((proj) => ({
