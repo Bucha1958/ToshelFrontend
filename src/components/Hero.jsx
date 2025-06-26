@@ -47,7 +47,7 @@ const Hero = () => {
   return (
     <div className="relative h-screen flex flex-col justify-center items-center">
       {/* <div className="absolute inset-0 bg-gray-900 bg-opacity-75"></div> */}
-      <div className={`absolute bottom-[140px] ${scrolled ? '' : ''}`}>
+      {/* <div className={`absolute bottom-[140px] ${scrolled ? '' : ''}`}>
         <button
           className="bg-white text-black text-xxs montserrat-one font-bold py-4 px-6 shadow-lg border-none"
           onClick={toggleSidebar}
@@ -61,7 +61,7 @@ const Hero = () => {
           className="fixed inset-0 transition-opacity z-30"
           onClick={toggleSidebar}
         />
-      )}
+      )} */}
     </div>
   );
 };

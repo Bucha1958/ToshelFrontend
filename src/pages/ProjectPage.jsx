@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ProjectContent from "../components/ProjectContent";
 import ProjectFilter from "../components/ProjectFilter";
 import Head from "../components/Head";
+import Footer from "../components/Footer";
 
 const filterOptions = ["All", "Industry", "Infrastructure", "Building"];
 
@@ -57,6 +58,7 @@ export default function ProjectsPage() {
         />
         <ProjectContent projects={filteredProjects} showAll />
       </div>
+      <Footer />
     </>
   );
 }

@@ -65,6 +65,10 @@ const SidebarContact = ({ isOpen, toggleSidebar }) => {
           </div>
           <div className="flex items-center gap-3">
             <FaPhoneAlt className="text-blue-600" />
+            <p>+234 814 114 9952</p>
+          </div>
+          <div className="flex items-center gap-3">
+            <FaPhoneAlt className="text-blue-600" />
             <p>+234 806 775 2844</p>
           </div>
           <div className="flex items-start gap-3">

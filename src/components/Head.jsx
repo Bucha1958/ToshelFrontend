@@ -7,6 +7,7 @@ import ThreeIcons from './ThreeIcons'
 import '../Hero.css';
 import SidebarContact from './SidebarContact';
 import logo from '../assets/logo.png';
+import NavButtons from './NavButtons';
 
 export const Head = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -43,17 +44,18 @@ export const Head = () => {
         <div className="flex w-full items-center justify-between">
 
           {/* Logo and Brand Name Group */}
-          <div className="flex items-center space-x-2">
-            <img src={logo} alt="Toshel Logo" width={80} height={90} />
-            <h1 className="text-4xl font-semibold tracking-widest">
+          <div className="flex items-center space-x-2 mr-[100px]">
+            <img src={logo} alt="Toshel Logo" width={90} height={90} />
+            <h1 className="text-2xl font-semibold font-[Cinzel] tracking-widest">
               <Link to="/">
                 TOSHEL <span className="hidden lg:inline">CONSTRUCTION</span>
               </Link>
             </h1>
           </div>
+          </div>
 
-          <ThreeIcons />
-        </div>
+          {/* Mobile Menu Button */}
+          <NavButtons />
       </header>
 
 

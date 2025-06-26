@@ -6,7 +6,8 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
-        roboto_mono: ['Roboto Mono', 'sans-serif']
+        roboto_mono: ['Roboto Mono', 'sans-serif'],
+        cinzel: ['Cinzel', 'serif']
       },
       fontSize: {
         'xxs': '0.7rem', // Example: Set a custom size named 'xxs'
