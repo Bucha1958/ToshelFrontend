@@ -40,7 +40,8 @@ const Footer = ({ toggleSidebar }) => {
                         <div className="flex space-x-4">
                             <a href="#" className="hover:text-gray-400"><FontAwesomeIcon icon={faFacebook} size="2x" /></a>
                             <a href="#" className="hover:text-gray-400"><FontAwesomeIcon icon={faTwitter} size="2x" /></a>
-                            <a href="#" className="hover:text-gray-400"><FontAwesomeIcon icon={faInstagram} size="2x" /></a>
+                            <a href="https://www.instagram.com/toshelconstruction042?igsh=MXZ4cWQ2YWw3Mnc1eA%3D%3D&utm_source=qr" 
+                            className="hover:text-gray-400"><FontAwesomeIcon icon={faInstagram} size="2x" /></a>
                             <a href="#" className="hover:text-gray-400"><FontAwesomeIcon icon={faYoutube} size="2x" /></a>
                         </div>
                     </div>
