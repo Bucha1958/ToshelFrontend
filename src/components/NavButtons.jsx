@@ -30,7 +30,10 @@ const NavButtons = () => {
             <Link to="/projects" className="hover:text-blue-600 transition">Projects</Link>
         </li>
         <li>
-            <Link to="/about" className="hover:text-blue-600 transition">About Us</Link>
+            <Link to="/about" className="hover:text-blue-600 transition">About</Link>
+        </li>
+        <li>
+            <Link to="/about#equipment" className="hover:text-blue-600 transition">Equipments</Link>
         </li>
         <li><button
             onClick={toggleContactSidebar}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Head from "../components/Head";
 
 export default function CreateCategory() {
   const [name, setName] = useState("");
@@ -28,21 +29,24 @@ export default function CreateCategory() {
   };
 
   return (
-    <div className="p-4 max-w-md mx-auto bg-white shadow-md mt-8">
-      <h2 className="text-xl font-bold mb-4">Create New Category</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Category Name"
-          className="border px-4 py-2 mb-4 w-full"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-        <button className="bg-blue-500 text-white px-4 py-2 rounded" type="submit">
-          Create
-        </button>
-      </form>
-    </div>
+    <>
+      <Head />
+      <div className="p-4 max-w-md mx-auto bg-white shadow-md mt-8">
+        <h2 className="text-xl font-bold mb-4">Create New Category</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Category Name"
+            className="border px-4 py-2 mb-4 w-full"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+          <button className="bg-blue-500 text-white px-4 py-2 rounded" type="submit">
+            Create
+          </button>
+        </form>
+      </div>
+    </>
   );
 }

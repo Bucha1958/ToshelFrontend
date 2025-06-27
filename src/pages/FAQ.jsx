@@ -5,24 +5,45 @@ import { faChevronDown, faChevronRight, faChevronUp} from '@fortawesome/free-sol
 import Head from '../components/Head';
 import Footer from '../components/Footer';
 import WhatsappPopUp from '../components/WhatsappPopUp';
+import SidebarContact from '../components/SidebarContact';
 
 const FAQ = () => {
-    const [ openIndex, setOpenIndex ] = useState(null)
+    const [ openIndex, setOpenIndex ] = useState(null);
+    const [sidebarOpen, setSidebarOpen] = useState(false);
+    const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
     const faqs = [
-        {
-            question: "What is your return policy?",
-            answer: "Our return policy lasts 30 days. If 30 days have gone by since your purchase, unfortunately, we can’t offer you a refund or exchange."
-        },
-        {
-            question: "Do you ship internationally?",
-            answer: "Yes, we ship worldwide. Shipping costs will apply, and will be added at checkout."
-        },
-        {
-            question: "How can I track my order?",
-            answer: "You can track your order using the tracking number provided in your order confirmation email."
-        },
-    ]
+    {
+        question: "What services does Toshel Construction and Equipment Limited offer?",
+        answer:
+        "Toshel offers services including road construction, bridges, drainage systems, land reclamation, river canalization, dredging, building projects, equipment supply, and facility management.",
+    },
+    {
+        question: "Where is Toshel Construction based?",
+        answer:
+        "Toshel Construction and Equipment Limited is based in Nigeria and operates across various regions nationwide.",
+    },
+    {
+        question: "Can Toshel handle large-scale infrastructure projects?",
+        answer:
+        "Yes, Toshel has a proven track record of handling major civil engineering projects. With a large fleet of modern equipment and a skilled team, we’re capable of executing projects of any scale.",
+    },
+    {
+        question: "Does Toshel provide equipment for rent or lease?",
+        answer:
+        "Yes, Toshel supplies and leases a wide range of construction equipment for different project needs.",
+    },
+    {
+        question: "What makes Toshel different from other construction companies?",
+        answer:
+        "Toshel offers complete construction solutions—from design to execution. We combine expertise, state-of-the-art equipment, and a client-centric approach to deliver excellence in every project.",
+    },
+    {
+        question: "How do I get in touch for a project consultation?",
+        answer:
+        "You can contact us via our website's contact form or click the WhatsApp chat icon to speak directly with our team.",
+    },
+    ];
 
     const toggleIndex = (index) => {
         setOpenIndex(openIndex === index ? null : index)
@@ -56,7 +77,14 @@ const FAQ = () => {
             </div>
         </div>
         <WhatsappPopUp />
-        <Footer />
+        <Footer toggleSidebar={toggleSidebar}/>
+        <SidebarContact isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+        {/* {sidebarOpen && (
+            <div
+            className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm transition-opacity"
+            onClick={toggleSidebar}
+            />
+        )} */}
     </>
     
   )

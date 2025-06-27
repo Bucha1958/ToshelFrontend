@@ -18,6 +18,7 @@ import CreateProject from "./pages/CreateProject";
 import CategoryDetail from "./pages/CategoryDetail";
 import CreateCategory from "./pages/CreateCategory";
 import ListCategory from "./pages/ListCategory";
+import EditProject from "./pages/EditProject";
 
 const App = () => {
   return (
@@ -37,6 +38,7 @@ const App = () => {
               <Route path="/cart" element={<CartPage />} />
               <Route path="/checkout" element={<CheckoutPage />} />
               <Route path="/create-project" element={<CreateProject/>} />
+              <Route path="/edit-project/:id" element={<EditProject/>} />
               <Route path="/category/:id" element={<CategoryDetail />} />
               <Route path="/admin/category" element={<CreateCategory />} />
               <Route path="/categories" element={<ListCategory />} />

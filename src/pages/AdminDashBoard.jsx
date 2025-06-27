@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import Head from "../components/Head";
 
 
 export default function AdminDashboard() {
@@ -55,18 +56,21 @@ export default function AdminDashboard() {
   }
 
   return (
-    <div className="min-h-screen p-8 bg-gray-100">
-      <h1 className="text-3xl font-bold mb-4">Welcome back,</h1>
+    <>
+      <Head />
+      <div className="min-h-screen p-8 bg-gray-100">
+        <h1 className="text-3xl font-bold mb-4">Welcome back,</h1>
 
-      <div className="flex flex-col items-center justify-center min-h-screen gap-4">
-        <Link to="/category" className="text-[#888] bg-[#f8f8f8] py-3 px-5 rounded-lg">
-            Create Category
-        </Link>
-         <Link to="/create-project" className="text-[#888] bg-[#f8f8f8] py-3 px-5 rounded-lg">
-            Create Project
-        </Link>
-        
+        <div className="flex flex-col items-center justify-center min-h-screen gap-4">
+          <Link to="/admin/category" className="text-[#888] bg-[#f8f8f8] py-3 px-5 rounded-lg">
+              Create Category
+          </Link>
+          <Link to="/create-project" className="text-[#888] bg-[#f8f8f8] py-3 px-5 rounded-lg">
+              Create Project
+          </Link>
+          
+        </div>
       </div>
-    </div>
+    </>
   );
 }

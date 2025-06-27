@@ -44,7 +44,7 @@ export const Head = () => {
         <div className="flex w-full items-center justify-between">
 
           {/* Logo and Brand Name Group */}
-          <div className="flex items-center space-x-2 mr-[100px]">
+          <div className="flex items-center space-x-2">
             <img src={logo} alt="Toshel Logo" width={90} height={90} />
             <h1 className="text-2xl font-semibold font-[Cinzel] tracking-widest">
               <Link to="/">

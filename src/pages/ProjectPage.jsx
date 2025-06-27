@@ -4,7 +4,7 @@ import ProjectFilter from "../components/ProjectFilter";
 import Head from "../components/Head";
 import Footer from "../components/Footer";
 
-const filterOptions = ["All", "Industry", "Infrastructure", "Building"];
+const filterOptions = ["All", "Industry", "Bridges", "Roads", "Building", "Equipment"];
 
 export default function ProjectsPage() {
   const [allProjects, setAllProjects] = useState([]);

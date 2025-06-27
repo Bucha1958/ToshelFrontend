@@ -42,7 +42,7 @@ const DeleteProductModal = ({ isOpen, onClose, onSubmit, product }) => {
           </button>
         </div>
         <div className='flex flex-col justify-center items-center w-full'>
-          <h2 className="text-xl text-black font-bold mb-4 uppercase monts">Delete Product</h2>
+          <h2 className="text-xl text-black font-bold mb-4 uppercase monts">Delete Project</h2>
         
           <form onSubmit={handleSubmit} className='p'>
             <h1 className='text-sm'>Are you sure you want to delete {name}?</h1>

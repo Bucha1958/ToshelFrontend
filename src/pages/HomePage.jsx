@@ -21,6 +21,7 @@ import Services from '../components/Services';
 import VisionSidebar from '../components/Vision';
 import Team from '../components/Teams';
 import ProjectGallery from '../components/ProjectGallery';
+import { useLocation } from 'react-router-dom';
 
 
 const HomePage = () => {
@@ -33,8 +34,22 @@ const HomePage = () => {
   const [initialState, setInitialState] = useState(true);
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
+  const location = useLocation();
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        // Wait a moment to ensure component is mounted
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 200);
+      }
+    }
+  }, [location]);
 
   useEffect(() => {
     setInitialState(true); // Set initial state when component mounts

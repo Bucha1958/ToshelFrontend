@@ -8,8 +8,9 @@ const Sidebar = ({ isOpen, toggleSidebar, toggleContactSidebar, contactSidebarOp
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
-    { name: 'Services', anchor: '#service' },
+    { name: 'Services', path: '/#service' },
     { name: 'Projects', path: '/projects' },
+    { name: 'Equipments', path: '/about#equipment' },
     { name: 'Contact', action: 'contact' },
   ];
 

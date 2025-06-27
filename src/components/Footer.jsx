@@ -11,24 +11,6 @@ const Footer = ({ toggleSidebar }) => {
                 <div className="flex flex-wrap justify-between">
                     {/* Column 1: Customer Service */}
                     <div className="w-full md:w-1/4 mb-8 md:mb-0">
-                        {/* <h4 className="text-xl font-semibold mb-4">Customer Service</h4>
-                        <ul className="space-y-4">
-                            <li>
-                                <a 
-                                    href="#" 
-                                    className="hover:underline" 
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        toggleSidebar();
-                                    }}
-                                >
-                                    Contact Us
-                                </a>
-                            </li>
-                            <li><a href="#" className="hover:underline">Shipping Information</a></li>
-                            <li><a href="#" className="hover:underline">Returns & Exchanges</a></li>
-                            <li><Link to="/frequently_asked_questions" className="hover:underline">FAQs</Link></li>
-                        </ul> */}
                         <h4 className="text-xl font-semibold mb-4">Our Services</h4>
                         <ul className="space-y-4">
                             <li>
@@ -36,7 +18,7 @@ const Footer = ({ toggleSidebar }) => {
                                     Contact Us
                                 </a>
                             </li>
-                            <li><a href="#" className="hover:underline">Project Management</a></li>
+                            <li><a href="/about#equipment" className="hover:underline">Project Equipment</a></li>
                             <li><a href="#" className="hover:underline">Civil Engineering</a></li>
                             <li><Link to="/frequently_asked_questions" className="hover:underline">FAQs</Link></li>
                         </ul>
