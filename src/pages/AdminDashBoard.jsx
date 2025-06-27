@@ -33,7 +33,7 @@ export default function AdminDashboard() {
           "Attention: You are not authorized to view this page. Please log in as an admin."
         );
         setTimeout(() => {
-          navigate("/login");
+          navigate("/admin/login");
         }, 1000);
       } finally {
         setLoading(false);

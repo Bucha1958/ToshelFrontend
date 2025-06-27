@@ -216,6 +216,7 @@ export default function AdminLoginPage() {
         const accessToken = data?.data?.accessToken;
         localStorage.setItem("accesstoken", accessToken);
         navigate("/dashboard");
+        window.location.reload();
       }
     } catch (err) {
       console.error(err);

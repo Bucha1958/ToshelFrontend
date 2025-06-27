@@ -23,14 +23,14 @@ const NavButtons = () => {
       <div className="md:hidden" />
 
       {/* Desktop Navigation */}
-      <ul className="hidden md:flex space-x-8 text-lg font-semibold font-[Cinzel]">
+      <ul className="hidden md:flex space-x-8 text-lg font-semibold font-[poppins]">
         <li><Link to="/" className="hover:text-blue-600 transition">Home</Link></li>
         <li><a href="#service" className="hover:text-blue-600 transition">Services</a></li>
         <li>
             <Link to="/projects" className="hover:text-blue-600 transition">Projects</Link>
         </li>
         <li>
-            <Link to="/about" className="hover:text-blue-600 transition">About</Link>
+            <Link to="/about" className="hover:text-blue-600 transition">About Us</Link>
         </li>
         <li>
             <Link to="/about#equipment" className="hover:text-blue-600 transition">Equipments</Link>

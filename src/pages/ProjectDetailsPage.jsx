@@ -1,14 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import LightboxGallery from "../components/LightboxGallery";
 import Head from "../components/Head";
 import DeleteProductModal from "../components/modals/DeleteProductModal";
+import { UserContext } from "../UserContext";
 
 export default function ProjectDetailsPage() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [project, setProject] = useState(null);
   const [loading, setLoading] = useState(true);
+  const { userInfo } = useContext(UserContext);
 
   useEffect(() => {
     if (!id) return;
@@ -77,7 +79,7 @@ export default function ProjectDetailsPage() {
               )}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3">
+            {/* <div className="flex flex-col sm:flex-row gap-3">
               <button
                 onClick={() => navigate(`/edit-project/${project._id}`)}
                 className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
@@ -90,7 +92,25 @@ export default function ProjectDetailsPage() {
               >
                 Delete
               </button>
-            </div>
+            </div> */}
+
+            {/* Only show if user is admin */}
+           {userInfo && userInfo.is_admin && (
+              <div className="flex flex-col sm:flex-row gap-3">
+                <button
+                  onClick={() => navigate(`/edit-project/${project._id}`)}
+                  className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                >
+                  Edit
+                </button>
+                <button
+                  onClick={handleDelete}
+                  className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition"
+                >
+                  Delete
+                </button>
+              </div>
+            )}
           </div>
 
           <p className="text-gray-700 leading-relaxed">{project.description}</p>

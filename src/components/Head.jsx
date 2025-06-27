@@ -1,9 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import FixedIcons from './FixedIcons';
-import ThreeIcons from './ThreeIcons'
 import '../Hero.css';
 import SidebarContact from './SidebarContact';
 import logo from '../assets/logo.png';
@@ -45,8 +41,8 @@ export const Head = () => {
 
           {/* Logo and Brand Name Group */}
           <div className="flex items-center space-x-2">
-            <img src={logo} alt="Toshel Logo" width={90} height={90} />
-            <h1 className="text-2xl font-semibold font-[Cinzel] tracking-widest">
+            <img src={logo} alt="Toshel Logo" width={90} height={100} />
+            <h1 className="text-4xl font-semibold font-[poppins] tracking-widest">
               <Link to="/">
                 TOSHEL <span className="hidden lg:inline">CONSTRUCTION</span>
               </Link>
