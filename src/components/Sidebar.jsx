@@ -11,6 +11,7 @@ const Sidebar = ({ isOpen, toggleSidebar, toggleContactSidebar }) => {
     { name: 'Projects', path: '/projects' },
     { name: 'Equipments', path: '/about#equipment' },
     { name: 'Contact', action: 'contact' },
+    { name: 'Portfolio', path: '/portfolio' }
   ];
 
   const handleClick = (link) => {
