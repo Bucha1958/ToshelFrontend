@@ -2,9 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../Hero.css';
-import SidebarContact from './SidebarContact';
 
-const Sidebar = ({ isOpen, toggleSidebar, toggleContactSidebar, contactSidebarOpen }) => {
+const Sidebar = ({ isOpen, toggleSidebar, toggleContactSidebar }) => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
@@ -73,14 +72,6 @@ const Sidebar = ({ isOpen, toggleSidebar, toggleContactSidebar, contactSidebarOp
       </div>
 
       {/* Contact Sidebar Slide-In */}
-      <SidebarContact isOpen={contactSidebarOpen} toggleSidebar={toggleContactSidebar} />
-
-      {contactSidebarOpen && (
-        <div
-          className="fixed inset-0 transition-opacity z-30 bg-black bg-opacity-40"
-          onClick={toggleContactSidebar}
-        />
-      )}
     </>
   );
 };

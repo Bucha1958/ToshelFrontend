@@ -19,6 +19,7 @@ import CategoryDetail from "./pages/CategoryDetail";
 import CreateCategory from "./pages/CreateCategory";
 import ListCategory from "./pages/ListCategory";
 import EditProject from "./pages/EditProject";
+import PortfolioPage from "./pages/PortfolioPage";
 
 const App = () => {
   return (
@@ -42,6 +43,7 @@ const App = () => {
               <Route path="/category/:id" element={<CategoryDetail />} />
               <Route path="/admin/category" element={<CreateCategory />} />
               <Route path="/categories" element={<ListCategory />} />
+              <Route path="/portfolio" element={<PortfolioPage/>} />
 
             </Routes>
           </Router>

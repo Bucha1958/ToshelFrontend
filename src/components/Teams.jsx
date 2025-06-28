@@ -30,7 +30,7 @@ export default function Team() {
   );
 
   return (
-    <section className="relative bg-white py-20 px-4 sm:px-6 lg:px-10 font-poppins overflow-hidden">
+    <section id="team" className="relative bg-white py-20 px-4 sm:px-6 lg:px-10 font-poppins overflow-hidden">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-800 mb-6">
           Meet Our Experts

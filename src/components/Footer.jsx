@@ -29,8 +29,8 @@ const Footer = ({ toggleSidebar }) => {
                         <h4 className="text-xl font-semibold mb-4">Company</h4>
                         <ul className="space-y-4">
                             <li><Link to="/about" className="hover:underline">About Toshel</Link></li>
-                            <li><a href="#" className="hover:underline">Meet the Team</a></li>
-                            <li><a href="#" className="hover:underline">Safety Policy</a></li>
+                            <li><a href="/#team" className="hover:underline">Meet the Team</a></li>
+                            <li><Link to="/portfolio" className="hover:underline">Portfolio</Link></li>
                             <li><a href="#" className="hover:underline">Quality Assurance</a></li>
                         </ul>
                     </div>

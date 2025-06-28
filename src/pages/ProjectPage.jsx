@@ -3,12 +3,15 @@ import ProjectContent from "../components/ProjectContent";
 import ProjectFilter from "../components/ProjectFilter";
 import Head from "../components/Head";
 import Footer from "../components/Footer";
+import SidebarContact from "../components/SidebarContact";
 
 const filterOptions = ["All", "Industry", "Bridges", "Roads", "Building", "Equipment"];
 
 export default function ProjectsPage() {
   const [allProjects, setAllProjects] = useState([]);
   const [activeFilter, setActiveFilter] = useState("All");
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -58,7 +61,14 @@ export default function ProjectsPage() {
         />
         <ProjectContent projects={filteredProjects} showAll />
       </div>
-      <Footer />
+      <Footer toggleSidebar={toggleSidebar}/>
+      <SidebarContact isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+      {sidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm transition-opacity"
+          onClick={toggleSidebar}
+        />
+      )}
     </>
   );
 }
