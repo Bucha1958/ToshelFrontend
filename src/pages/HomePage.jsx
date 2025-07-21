@@ -22,6 +22,7 @@ import VisionSidebar from '../components/Vision';
 import Team from '../components/Teams';
 import ProjectGallery from '../components/ProjectGallery';
 import { useLocation } from 'react-router-dom';
+import VideoHero from '../components/VideoHero';
 
 
 const HomePage = () => {
@@ -100,6 +101,7 @@ const HomePage = () => {
         <Hero />
       </div>
       <Services />
+      <VideoHero />
       {loading ? (
         <div className="text-center py-10">Loading projects...</div>
       ) : (
