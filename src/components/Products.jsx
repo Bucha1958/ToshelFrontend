@@ -13,7 +13,7 @@ const Products = () => {
 
   useEffect(() => {
     // Fetch products from API
-    fetch(`https://toshel.org/api/products`, {
+    fetch(`https://www.toshel.org/api/projects`, {
       credentials: 'include',
     })
       .then(response => response.json())
