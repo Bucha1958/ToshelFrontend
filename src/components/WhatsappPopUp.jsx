@@ -28,7 +28,7 @@ const WhatsappPopUp = () => {
       const interval = setInterval(() => {
         setShowPopup(true);
         setMessageIndex(prevIndex => (prevIndex + 1) % messages.length);
-      }, 40000); // Show popup every 20 seconds
+      }, 20000); // Show popup every 20 seconds
 
       return () => clearInterval(interval);
     }
