@@ -5,11 +5,13 @@ export default function ListCategory() {
   const navigate = useNavigate();
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/categories`);
+        const response = await fetch(`${API_BASE_URL}/api/categories`);
         const data = await response.json();
         setCategories(data?.categories || []);
       } catch (error) {

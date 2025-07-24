@@ -11,11 +11,12 @@ export default function ProjectDetailsPage() {
   const [project, setProject] = useState(null);
   const [loading, setLoading] = useState(true);
   const { userInfo } = useContext(UserContext);
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
   useEffect(() => {
     if (!id) return;
 
-    fetch(`${import.meta.env.VITE_API_URL}/api/projects/${id}`)
+    fetch(`${API_BASE_URL}/api/projects/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProject(data.project);
@@ -32,7 +33,7 @@ export default function ProjectDetailsPage() {
     if (!confirmed) return;
 
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/projects/${id}`, {
+      const res = await fetch(`${API_BASE_URL}/api/projects/${id}`, {
         method: "DELETE",
       });
 

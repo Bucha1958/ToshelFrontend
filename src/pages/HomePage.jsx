@@ -37,6 +37,8 @@ const HomePage = () => {
   const [loading, setLoading] = useState(true);
   const location = useLocation();
 
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
   useEffect(() => {
@@ -67,7 +69,7 @@ const HomePage = () => {
   }, [nextImageIndex, images.length]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/projects`)
+    fetch(`${API_BASE_URL}/api/projects`)
       .then((res) => res.json())
       .then((data) => {
         const formattedProjects = data.projects.map((proj) => ({
@@ -102,12 +104,12 @@ const HomePage = () => {
       </div>
       <Services />
       <VideoHero />
+      <Team />
       {loading ? (
         <div className="text-center py-10">Loading projects...</div>
       ) : (
         <ProjectGallery projects={projects} />
       )}
-      <Team />
       <LocationMap />
       <WhatsAppPopup />
       <Footer toggleSidebar={toggleSidebar}/>

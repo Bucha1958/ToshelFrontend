@@ -6,11 +6,13 @@ export default function CategoryDetail() {
   const { id } = useParams();
 
   const [category, setCategory] = useState(null);
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 
   useEffect(() => {
     const fetchCategory = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/categories/${id}`);
+        const response = await fetch(`${API_BASE_URL}/api/categories/${id}`);
         const data = await response.json();
         setCategory(data?.category);
       } catch (error) {

@@ -9,13 +9,14 @@ export default function AdminDashboard() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
   useEffect(() => {
     const fetchUser = async () => {
       setLoading(true);
       try {
         const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/api/users/me`,
+          `${API_BASE_URL}/api/users/me`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("accesstoken")}`,

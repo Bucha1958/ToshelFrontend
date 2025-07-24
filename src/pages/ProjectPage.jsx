@@ -14,9 +14,11 @@ export default function ProjectsPage() {
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
   useEffect(() => {
+
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
     const fetchProjects = async () => {
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/projects`);
+        const res = await fetch(`${API_BASE_URL}/api/projects`);
         const data = await res.json();
 
         if (!Array.isArray(data.projects)) {

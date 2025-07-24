@@ -18,12 +18,14 @@ export default function EditProject() {
   const [category, setCategory] = useState("");
   const [removedImages, setRemovedImages] = useState([]);
   const [removeExistingVideo, setRemoveExistingVideo] = useState(false);
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 
 
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/categories`);
+        const response = await fetch(`${API_BASE_URL}/api/categories`);
         const data = await response.json();
         setCategories(data?.categories || []);
       } catch (error) {
@@ -33,7 +35,7 @@ export default function EditProject() {
 
     const fetchProject = async () => {
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/projects/${projectId}`);
+        const res = await fetch(`${API_BASE_URL}/api/projects/${projectId}`);
         const data = await res.json();
         const proj = data.project;
         setTitle(proj.title || "");
@@ -69,7 +71,7 @@ export default function EditProject() {
     if (newVideo) formData.append("video", newVideo);
 
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/projects/${projectId}`, {
+      const res = await fetch(`${API_BASE_URL}/api/projects/${projectId}`, {
         method: "PUT",
         body: formData,
       });

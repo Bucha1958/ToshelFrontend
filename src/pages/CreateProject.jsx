@@ -12,13 +12,15 @@ export default function CreateProject() {
   const [success, setSuccess] = useState(null);
   const [categories, setCategories] = useState([]);
   const [category, setCategory] = useState("");
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 
   const ref = useRef(null);
 
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/categories`);
+        const response = await fetch(`${API_BASE_URL}/api/categories`);
         const data = await response.json();
         setCategories(data?.categories || []);
       } catch (error) {
@@ -46,7 +48,7 @@ export default function CreateProject() {
     }
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/projects`, {
+      const response = await fetch(`${API_BASE_URL}/api/projects`, {
         method: "POST",
         body: formData,
       });
