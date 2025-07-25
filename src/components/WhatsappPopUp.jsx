@@ -18,7 +18,7 @@ const WhatsappPopUp = () => {
   useEffect(() => {
     const hidePopup = setTimeout(() => {
       setShowPopup(false);
-    }, 15000); // Hide after 10 seconds
+    }, 10000); // Hide after 10 seconds
 
     return () => clearTimeout(hidePopup);
   }, [showPopup]);
@@ -28,7 +28,7 @@ const WhatsappPopUp = () => {
       const interval = setInterval(() => {
         setShowPopup(true);
         setMessageIndex(prevIndex => (prevIndex + 1) % messages.length);
-      }, 20000); // Show popup every 20 seconds
+      }, 10000); // Show popup every 20 seconds
 
       return () => clearInterval(interval);
     }
